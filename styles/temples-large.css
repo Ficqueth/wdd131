@@ -1,0 +1,46 @@
+@media only screen and (min-width: 768px) {
+    /* Navigation: Align items properly */
+    nav {
+        justify-content: space-between; /* Ensures "Temple Album" stays left & nav moves right */
+    }
+
+    nav ul {
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+
+    nav ul li {
+        margin: 0 15px;
+    }
+
+    /* Hide the hamburger menu */
+    #menu {
+        display: none;
+    }
+
+    /* Show horizontal navigation */
+    .navigation {
+        display: flex;
+        flex-direction: row;
+        position: static;
+        background: none;
+        width: auto;
+    }
+
+    .navigation a {
+        display: block;
+        padding: 10px;
+    }
+
+    /* Main content: 2-column grid */
+    main {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media only screen and (min-width: 1300px) {
+    /* Main content: 3-column grid */
+    main {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
