@@ -1,0 +1,117 @@
+{
+  "AWSTemplateFormatVersion": "2010-09-09",
+  "Resources": {
+    "EvsServiceRolePolicy": {
+      "Type": "AWS::IAM::Policy",
+      "Properties": {
+        "PolicyName": "EvsServiceRolePolicy",
+        "PolicyDocument": {
+          "Version": "2012-10-17",
+          "Statement": [
+            {
+              "Sid": "DescribeNetworkStatement",
+              "Effect": "Allow",
+              "Action": [
+                "ec2:DescribeSubnets",
+                "ec2:DescribeVpcs",
+                "ec2:DescribeNetworkInterfaces"
+              ],
+              "Resource": "*"
+            },
+            {
+              "Sid": "CreateEniInSubnetStatement",
+              "Effect": "Allow",
+              "Action": [
+                "ec2:CreateNetworkInterface"
+              ],
+              "Resource": [
+                "arn:*:ec2:*:*:subnet/*",
+                "arn:*:ec2:*:*:security-group/*"
+              ]
+            },
+            {
+              "Sid": "CreateEniWithTagStatement",
+              "Effect": "Allow",
+              "Action": [
+                "ec2:CreateNetworkInterface"
+              ],
+              "Resource": "arn:*:ec2:*:*:network-interface/*",
+              "Condition": {
+                "Null": {
+                  "aws:RequestTag/AmazonElasticVMwareServiceManaged": "false"
+                }
+              }
+            },
+            {
+              "Sid": "TagOnCreateNetworkInterface",
+              "Effect": "Allow",
+              "Action": [
+                "ec2:CreateTags"
+              ],
+              "Resource": "arn:*:ec2:*:*:network-interface/*",
+              "Condition": {
+                "Null": {
+                  "aws:RequestTag/AmazonElasticVMwareServiceManaged": "false"
+                },
+                "StringEquals": {
+                  "ec2:CreateAction": [
+                    "CreateNetworkInterface"
+                  ]
+                }
+              }
+            },
+            {
+              "Sid": "ManageEniStatement",
+              "Effect": "Allow",
+              "Action": [
+                "ec2:CreateNetworkInterfacePermission",
+                "ec2:DeleteNetworkInterface",
+                "ec2:ModifyNetworkInterfaceAttribute",
+                "ec2:AssignIpv6Addresses"
+              ],
+              "Resource": "arn:*:ec2:*:*:network-interface/*",
+              "Condition": {
+                "Null": {
+                  "aws:ResourceTag/AmazonElasticVMwareServiceManaged": "false"
+                }
+              }
+            },
+            {
+              "Sid": "UpdateSecurityGroupStatement",
+              "Effect": "Allow",
+              "Action": [
+                "ec2:ModifyNetworkInterfaceAttribute"
+              ],
+              "Resource": "arn:*:ec2:*:*:security-group/*"
+            }
+          ]
+        },
+        "Roles": [
+          {
+            "Ref": "EvsServiceRole"
+          }
+        ]
+      }
+    },
+    "EvsServiceRole": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "RoleName": "EvsServiceRole",
+        "AssumeRolePolicyDocument": {
+          "Version": "2012-10-17",
+          "Statement": [
+            {
+              "Effect": "Allow",
+              "Principal": {
+                "Service": [
+                  "evs.amazonaws.com"
+                ]
+              },
+              "Action": "sts:AssumeRole"
+            }
+          ]
+        }
+      }
+    }
+  }
+}
