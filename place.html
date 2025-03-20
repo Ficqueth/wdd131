@@ -12,7 +12,62 @@
         <title>WDD 131 - Country Page - Helaman Ficquet</title>
     </head>
 <body>
+    <header>
+        <h1>France</h1>
+    </header>
+    <main>
+        <div class="hero">
+            <picture>
+                <source srcset="images/hero-paris-large.webp" media="(min-width: 1000px)">
+                <source srcset="images/hero-paris-medium.webp" media="(min-width: 500px)">
+                <img src="images/hero-paris-small.webp" alt="France" width="500" height="250">
+            </picture>
+            <section class="card" id="data">
+                <h2>Data</h2>
+                <div>
+                    <p><strong>Area:</strong></p>
+                    <p>643,801 km²</p>
+                    <p><strong>Population:</strong></p>
+                    <p>68.29 million</p>
+                    <p><strong>Captal:</strong></p>
+                    <p>Paris</p>
+                    <p><strong>Languages:</strong></p>
+                    <p>French</p>
+                    <p><strong>Currency:</strong></p>
+                    <p>Euro</p>
+                    <p><strong>Time Zone:</strong></p>
+                    <p>UTC+1</p>
+                    <p><strong>Calling Code:</strong></p>
+                    <p>+33</p>
+                    <p><strong>Internet TLD:</strong></p>
+                    <p>.fr</p>
+                </div>
+            </section>
     
+            <!-- Section for Weather -->
+            <section class="card" id="weather">
+                <h2>Weather <img src="images/weather.svg" alt="weather" id="weather-icon"></h2>
+                
+                <div>
+                    <p><strong>Temperature:</strong></p>
+                    <p><span id="current-temp"></span></p>
+                    <p><strong>Conditions:</strong></p>
+                    <p><span id="weather-conditions"></span></p>
+                    <p><strong>Wind:</strong></p>
+                    <p><span id="wind-speed"></span></p>
+                    <p><strong>Wind Chill:</strong></p>
+                    <p><span id="wind-chill"></span></p>
+                </div>
+            </section>
+    
+        </div>
+        
+    </main>
+    <footer>
+        <p>&copy; <span id="currentyear"></span> Helaman Ficquet | USA</p>
+        <p id="lastModified"></p>
+    </footer>
+    <script src="scripts/getdates.js" defer></script>
     <script src="scripts/place.js" defer></script>
 </body>
 </html>

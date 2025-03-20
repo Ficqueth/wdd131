@@ -1,0 +1,92 @@
+:root {
+	--bord: 1px solid #777;
+}
+
+* {
+    margin: 0px;
+}
+
+/* Header Styles */
+header {
+    background-color: #f31018;
+    border-bottom: 1rem solid #066a14;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+main{
+    margin: 0;
+    padding: 0;
+    position: relative;
+  }
+
+.hero img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .hero {
+    position: relative;
+  }
+
+
+.card {
+    background: rgba(255, 255, 255, 0.7);
+    padding: 15px;
+    border-radius: 10px;
+    width: 330px;
+    box-sizing: border-box;
+}
+
+.card div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+}
+
+.card strong {
+    display: block;
+    text-align: right;
+}
+
+#data {
+    position: absolute;
+	top: 30px;
+	left: 30px;
+	background: rgba(255, 255, 255, 0.7);
+	border: 1px solid rgba(0,0,0,.75);
+    gap: 0.5rem;
+    color: #000000;
+}
+
+#weather {
+    position: absolute;
+	bottom: 30px;
+	right: 30px;
+	background: rgba(255, 255, 255, 0.7);
+	border: 1px solid rgba(0,0,0,.75);
+    gap: 0.5rem;
+    color: #000000;
+}
+
+#weather h2 {
+    display: flex;
+    align-items: center; /* Vertically center the icon with the text */
+    margin: 0;
+}
+
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #f31018;
+    color: white;
+}
+
+#weather #weather-icon {
+    width: 30px; 
+    height: auto; 
+    margin-left: 10px; /* Space between the icon and the title */
+}
