@@ -74,14 +74,14 @@ main{
 #weather h2 {
     background-color: #066a14;
     display: flex;
-    align-items: center; /* Vertically center the icon with the text */
+    align-items: center; 
     margin: 0;
 }
 
 #data h2 {
     background-color: #066a14;
     display: flex;
-    align-items: center; /* Vertically center the icon with the text */
+    align-items: center; 
     margin: 0;
 }
 
@@ -96,26 +96,26 @@ footer {
 #weather #weather-icon {
     width: 30px; 
     height: auto; 
-    margin-left: 10px; /* Space between the icon and the title */
+    margin-left: 10px;
 }
 
 /* Media query for smaller screens (max-width 768px) */
 @media (max-width: 768px) {
-    /* Stacking the #data and #weather cards vertically */
+    
     #data, #weather {
         position: relative;
-        width: 100%; /* Ensure they take the full width */
-        margin: 10px 0; /* Add some margin between the two */
-        left: 0; /* Reset positioning for stacking */
-        bottom: 0; /* Reset positioning for stacking */
+        width: 100%; 
+        margin: 10px 0; 
+        left: 0; 
+        bottom: 0; 
         top: 10px;
+        margin-bottom: 20px;
     }
 
-    /* Adjust the font size and layout of the title and weather icon */
     #weather h2 {
         display: flex;
         align-items: center;
-        justify-content: flex-start; /* Align the icon to the left */
+        justify-content: flex-start; 
     }
 
     #weather #weather-icon {
@@ -124,7 +124,6 @@ footer {
         margin-left: 10px;
     }
 
-    /* Optional: adjust the card width for better mobile experience */
     .card {
         width: 100%; /* Full width on mobile */
         padding: 15px;
@@ -132,7 +131,7 @@ footer {
 
     /* Adjust hero image to fit better on smaller screens */
     .hero img {
-        width: 100%; /* Ensure the image takes up the full width */
+        width: 100%; 
         height: auto;
     }
 }
