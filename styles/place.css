@@ -72,6 +72,14 @@ main{
 }
 
 #weather h2 {
+    background-color: #066a14;
+    display: flex;
+    align-items: center; /* Vertically center the icon with the text */
+    margin: 0;
+}
+
+#data h2 {
+    background-color: #066a14;
     display: flex;
     align-items: center; /* Vertically center the icon with the text */
     margin: 0;
@@ -100,6 +108,7 @@ footer {
         margin: 10px 0; /* Add some margin between the two */
         left: 0; /* Reset positioning for stacking */
         bottom: 0; /* Reset positioning for stacking */
+        top: 10px;
     }
 
     /* Adjust the font size and layout of the title and weather icon */
