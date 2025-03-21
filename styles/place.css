@@ -1,7 +1,3 @@
-:root {
-	--bord: 1px solid #777;
-}
-
 * {
     margin: 0px;
 }
@@ -94,10 +90,12 @@ footer {
     color: white;
 }
 
-#weather #weather-icon {
-    width: 30px; 
-    height: auto; 
-    margin-left: 10px;
+
+#weather h2::after {
+    content: url('../images/weather.svg'); /* Specify your icon path here */
+    width: 30px;
+    height: auto;
+    margin-left: 10px; /* Space between the text and icon */
 }
 
 /* Media query for smaller screens (max-width 768px) */
