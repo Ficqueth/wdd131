@@ -98,10 +98,17 @@ footer {
 
 
 #weather h2::after {
-    content: url('../images/weather.svg'); /* Specify your icon path here */
+    content: " ⛅";
     width: 30px;
     height: auto;
     margin-left: 10px; /* Space between the text and icon */
+}
+
+#weather #weather-icon {
+    width: 24px; /* Make the icon smaller for mobile */
+    height: auto;
+    margin-left: 10px;
+    display: none;
 }
 
 /* Media query for smaller screens (max-width 768px) */
