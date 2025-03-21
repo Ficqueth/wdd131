@@ -8,8 +8,8 @@
 
 /* Header Styles */
 header {
-    background-color: #f31018;
-    border-bottom: 1rem solid #066a14;
+    background-color: #b50309;
+    border-bottom: 1rem solid #036811;
     color: white;
     padding: 1rem;
     text-align: center;
@@ -44,6 +44,7 @@ main{
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 0.5rem;
+    color: black;
 }
 
 .card strong {
@@ -58,7 +59,7 @@ main{
 	background: rgba(255, 255, 255, 0.7);
 	border: 1px solid rgba(0,0,0,.75);
     gap: 0.5rem;
-    color: #000000;
+    color: #ffffff;
 }
 
 #weather {
@@ -68,18 +69,18 @@ main{
 	background: rgba(255, 255, 255, 0.7);
 	border: 1px solid rgba(0,0,0,.75);
     gap: 0.5rem;
-    color: #000000;
+    color: #ffffff;
 }
 
 #weather h2 {
-    background-color: #066a14;
+    background-color: #036811;
     display: flex;
     align-items: center; 
     margin: 0;
 }
 
 #data h2 {
-    background-color: #066a14;
+    background-color: #036811;
     display: flex;
     align-items: center; 
     margin: 0;
@@ -89,7 +90,7 @@ main{
 footer {
     text-align: center;
     padding: 10px;
-    background-color: #f31018;
+    background-color: #b50309;
     color: white;
 }
 
