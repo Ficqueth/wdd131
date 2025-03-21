@@ -127,13 +127,19 @@ footer {
     #weather h2 {
         display: flex;
         align-items: center;
-        justify-content: flex-start; 
+        justify-content: flex-start;
     }
 
     #weather #weather-icon {
         width: 24px; /* Make the icon smaller for mobile */
         height: auto;
         margin-left: 10px;
+        display: block; /* Show the SVG icon on mobile */
+    }
+
+    /* Hide the weather symbol (using ::after) on mobile */
+    #weather h2::after {
+        content: none;
     }
 
     .card {
