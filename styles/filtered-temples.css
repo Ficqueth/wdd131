@@ -131,6 +131,7 @@ main {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
     gap: 20px;
     justify-content: center;
+    flex-grow: 1;
 }
 
 /* Center the main heading */
@@ -168,6 +169,7 @@ figcaption {
     text-align: center;
     transition: transform 0.3s ease-in-out;
     margin: auto;
+    min-height: 450px;
 }
 
 .temple-card:hover {
