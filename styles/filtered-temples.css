@@ -1,0 +1,167 @@
+/* ========== GENERAL STYLES ========== */
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* ========== HEADER STYLES ========== */
+header {
+    background-color: #003366;
+    color: white;
+    padding: 1rem;
+}
+
+/* ========== NAVIGATION STYLES ========== */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #003366;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* "Temple Album" title */
+nav h1 {
+    flex: 1;
+    max-width: 25%;
+    text-align: left;
+    margin: 0;
+    font-size: 24px;
+    color: white;
+}
+
+/* Navigation menu */
+nav ul {
+    flex: 2;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 10px;
+    transition: background 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: lightblue;
+    border-radius: 5px;
+    padding: 8px 12px;
+}
+
+/* ========== HAMBURGER MENU STYLES (Mobile) ========== */
+#menu {
+    font-size: 1.5rem;
+    border: 0;
+    background: none;
+    color: white;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+    display: block;
+}
+
+#menu::before {
+    content: "☰"; /* Hamburger icon */
+}
+
+#menu.open::before {
+    content: "❌"; /* Close icon */
+}
+
+/* ========== MOBILE NAVIGATION STYLES ========== */
+.navigation {
+    display: none; /* Initially hidden */
+    flex-direction: column;
+    list-style: none;
+    background-color: #22478c;
+    color: white;
+    padding: 0;
+    position: absolute;
+    top: 50px;
+    right: 10px;
+    width: 200px;
+}
+
+.navigation a {
+    display: block;
+    padding: 1rem;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+}
+
+.navigation a:hover {
+    color: #333;
+    font-weight: 700;
+}
+
+/* Show menu when .open class is added */
+.open {
+    display: flex;
+    flex-direction: column;
+}
+
+/* ========== MAIN CONTENT STYLES ========== */
+main {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns: 1fr; /* Single column for mobile */
+    gap: 20px;
+}
+
+/* Center the main heading */
+main h2 {
+    grid-column: 1 / -1; /* Makes the title span across all columns */
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+/* ========== IMAGE GALLERY STYLES ========== */
+figure {
+    text-align: center;
+}
+
+figure img {
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+figcaption {
+    margin-top: 5px;
+    font-style: italic;
+    font-weight: bold;
+}
+
+/* ========== FOOTER STYLES ========== */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #003366;
+    color: white;
+    margin-top: 20px;
+}

@@ -41,7 +41,7 @@
 @media only screen and (min-width: 1300px) {
     /* Main content: 3-column grid */
     main {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     }
 }
 
