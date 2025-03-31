@@ -157,6 +157,26 @@ figcaption {
     font-weight: bold;
 }
 
+/* TEMPLE CARD STYLES */
+.temple-card {
+    background-color: #f9f9f9;
+    padding: 16px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.temple-card:hover {
+    transform: scale(1.05); /* Adds a subtle hover effect */
+}
+
+.temple-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
 /* ========== FOOTER STYLES ========== */
 footer {
     text-align: center;

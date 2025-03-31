@@ -89,22 +89,62 @@ const temples = [
       }
   ];
 
-  // Loop through the temples array and dynamically generate HTML for each temple card
-document.addEventListener('DOMContentLoaded', () => {
-    const mainContainer = document.querySelector('main');
-    
-    temples.forEach(temple => {
-      const templeCard = document.createElement('div');
-      templeCard.classList.add('temple-card');
-      
-      templeCard.innerHTML = `
-        <h3>${temple.templeName}</h3>
-        <p><strong>Location:</strong> ${temple.location}</p>
-        <p><strong>Dedicated:</strong> ${temple.dedicated}</p>
-        <p><strong>Area:</strong> ${temple.area.toLocaleString()} square feet</p>
-        <img src="${temple.imageUrl}" alt="${temple.templeName}" loading="lazy" />
-      `;
-      
-      mainContainer.appendChild(templeCard);
+const main = document.querySelector("main"); // The main section where temples are displayed
+const navLinks = document.querySelectorAll("nav ul li a"); // Navigation links
+
+function displayTemples(filteredTemples) {
+    main.innerHTML = ""; // Clear current content before inserting new temples
+
+    filteredTemples.forEach(temple => {
+        const templeCard = document.createElement("div");
+        templeCard.classList.add("temple-card");
+
+        templeCard.innerHTML = `
+            <figure>
+                <img src="${temple.imageUrl}" alt="${temple.templeName}" loading="lazy">
+                <figcaption>
+                    <h3>${temple.templeName}</h3>
+                    <p><strong>Location:</strong> ${temple.location}</p>
+                    <p><strong>Dedicated:</strong> ${temple.dedicated}</p>
+                    <p><strong>Area:</strong> ${temple.area} sq ft</p>
+                </figcaption>
+            </figure>
+        `;
+
+        main.appendChild(templeCard);
     });
-  });
+}
+
+
+  function filterTemples(filterType) {
+    let filteredTemples;
+
+    switch (filterType) {
+        case "Old":
+            filteredTemples = temples.filter(t => parseInt(t.dedicated.split(",")[0]) < 1900);
+            break;
+        case "New":
+            filteredTemples = temples.filter(t => parseInt(t.dedicated.split(",")[0]) > 2000);
+            break;
+        case "Large":
+            filteredTemples = temples.filter(t => t.area > 90000);
+            break;
+        case "Small":
+            filteredTemples = temples.filter(t => t.area < 10000);
+            break;
+        default:
+            filteredTemples = temples; // Home: Show all temples
+    }
+
+    displayTemples(filteredTemples);
+}
+
+navLinks.forEach(link => {
+    link.addEventListener("click", function (event) {
+        event.preventDefault(); // Prevent default link behavior
+        const filterType = this.textContent; // Get the link text
+        filterTemples(filterType);
+    });
+});
+
+displayTemples(temples);
