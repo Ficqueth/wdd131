@@ -160,11 +160,13 @@ figcaption {
 /* TEMPLE CARD STYLES */
 .temple-card {
     background-color: #f9f9f9;
+    max-width: 400px;
     padding: 16px;
     border-radius: 5px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
     text-align: center;
     transition: transform 0.3s ease-in-out;
+    margin: auto;
 }
 
 .temple-card:hover {
@@ -174,6 +176,8 @@ figcaption {
 .temple-card img {
     width: 100%;
     height: auto;
+    aspect-ratio: 16/10;
+    display: block;
     border-radius: 5px;
 }
 
