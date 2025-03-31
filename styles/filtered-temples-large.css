@@ -35,7 +35,6 @@
     /* Main content: 2-column grid */
     main {
         grid-template-columns: repeat(2, 1fr);
-        display: flex;
         justify-content: center; 
     }
 }
@@ -44,7 +43,6 @@
     /* Main content: 3-column grid */
     main {
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        display: flex;
         justify-content: center; 
     }
 }
