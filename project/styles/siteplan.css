@@ -26,9 +26,15 @@ p, li {
 #typography li {
     margin-bottom: 10px;
 }
-.accent-color {
-    color: #ff6347; /* Accent color (tomato red) for highlights */
+
+#color-schema li .green-color {
+    color: #2e8b57; /* Green color for "Green (#2e8b57)" text */
 }
+
+#color-schema li .tomato-red-color {
+    color: #ff6347; /* Tomato red color for "Tomato Red (#ff6347)" text */
+}
+
 /* Layout for the homepage */
 .container {
     display: flex;
