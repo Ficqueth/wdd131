@@ -15,48 +15,66 @@
     <main>
         <h1>Product Review</h1>
         <form method="get" action="review.html">
-          
-          <!-- Product Name (Select) -->
-          <label for="product">Product Name:</label>
-          <select id="product" name="product" required>
+        
+        <!-- Product Name (Select) -->
+        <label for="product">Product Name:</label>
+        <select id="product" name="product" required>
             <option value="" disabled selected>Select a Product ...</option>
-          </select>
+        </select>
     
-          <!-- Overall Rating (Stars via Radio Buttons) -->
-          <fieldset>
+        <!-- Overall Rating (Stars via Radio Buttons) -->
+        <fieldset class="rating-stars">
             <legend>Overall Rating:</legend>
             <label><input type="radio" name="rating" id="star1" value="1" required /> ☆</label>
             <label><input type="radio" name="rating" id="star2" value="2" /> ☆☆</label>
             <label><input type="radio" name="rating" id="star3" value="3" /> ☆☆☆</label>
             <label><input type="radio" name="rating" id="star4" value="4" /> ☆☆☆☆</label>
             <label><input type="radio" name="rating" id="star5" value="5" /> ☆☆☆☆☆</label>
-          </fieldset>
+        </fieldset>
     
-          <!-- Date of Installation -->
-          <label for="install-date">Date of Installation:</label>
-          <input type="date" id="install-date" name="install-date" required />
+        <!-- Date of Installation -->
+        <label for="install-date">Date of Installation:</label>
+        <input type="date" id="install-date" name="install-date" required />
     
-          <!-- Useful Features (Checkboxes) -->
-          <fieldset>
-            <legend>Which features did you find useful in the product? ( Check all that apply)</legend>
-            <label><input type="checkbox" id="feature1" name="features" value="Easy Installation" /> Easy Installation</label>
-            <label><input type="checkbox" id="feature2" name="features" value="Durability" /> Durability</label>
-            <label><input type="checkbox" id="feature3" name="features" value="Affordability" /> Affordability</label>
-            <label><input type="checkbox" id="feature4" name="features" value="Eco Friendly" /> Eco Friendly</label>
-          </fieldset>
+        <fieldset>
+            <legend>Which features did you find useful in the product? (Check all that apply)</legend>
+          
+            <div class="checkbox-group">
+              <input type="checkbox" id="feature1" name="features" value="Easy Installation" />
+              <label for="feature1">Easy Installation</label>
+            </div>
+          
+            <div class="checkbox-group">
+              <input type="checkbox" id="feature2" name="features" value="Durability" />
+              <label for="feature2">Durability</label>
+            </div>
+          
+            <div class="checkbox-group">
+              <input type="checkbox" id="feature3" name="features" value="Affordability" />
+              <label for="feature3">Affordability</label>
+            </div>
+          
+            <div class="checkbox-group">
+              <input type="checkbox" id="feature4" name="features" value="Eco Friendly" />
+              <label for="feature4">Eco Friendly</label>
+            </div>
+        </fieldset>
+          
     
-          <!-- Written Review -->
-          <label for="review">Written Review (Optional)</label>
-          <textarea id="review" name="review" rows="5" cols="30"></textarea>
+        <!-- Written Review -->
+        <label for="review">Written Review (Optional)</label>
+        <textarea id="review" name="review" rows="5" cols="30"></textarea>
     
-          <!-- User Name -->
-          <label for="username">Your Name (Optional) </label>
-          <input type="text" id="username" name="username" />
+        <!-- User Name -->
+        <label for="username">Your Name (Optional) </label>
+        <input type="text" id="username" name="username" />
     
-          <!-- Submit Button -->
-          <input type="submit" value="Post Review" />
+        <!-- Submit Button -->
+        <div class="button-container">
+            <input type="submit" value="Post Review" />
+        </div>
         </form>
-      </main>
+    </main>
     <footer>
         <p>&copy; <span id="currentyear"></span> Helaman Ficquet | USA</p>
         <p id="lastModified"></p>

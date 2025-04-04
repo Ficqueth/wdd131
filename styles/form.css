@@ -57,6 +57,23 @@
     border: none;
     margin-bottom: 1.5rem;
   }
+
+  .checkbox-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  .checkbox-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.75rem;
+  }
+  
+  .checkbox-group input[type="checkbox"] {
+    margin-right: 0.5rem;
+  }
+  
   
   legend {
     font-weight: 600;
@@ -69,20 +86,17 @@
     margin-right: 0.5rem;
     accent-color: #2E86AB;
   }
+
+/* Star Ratings (Radio Buttons) */
+.rating-stars label {
+  display: inline-block;
+  margin-right: 1rem;
+  font-size: 1.25rem;
+  color: #F18F01;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
   
-  /* Star Ratings */
-  fieldset label {
-    display: inline-block;
-    margin-right: 1rem;
-    font-size: 1.25rem;
-    color: #F18F01;
-    cursor: pointer;
-    transition: transform 0.2s ease-in-out;
-  }
-  
-  fieldset label:hover {
-    transform: scale(1.2);
-  }
   
   /* Submit Button */
   input[type="submit"] {
@@ -116,4 +130,8 @@
     font-weight: 500;
     margin-top: 2rem;
   }
-  
+
+  .button-container {
+    display: flex;
+    justify-content: center;
+  }
