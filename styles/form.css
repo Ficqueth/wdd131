@@ -59,14 +59,13 @@
   }
 
   .checkbox-group label {
-    display: block;
     margin-bottom: 0.5rem;
     font-size: 1rem;
     cursor: pointer;
   }
   .checkbox-group {
     display: flex;
-    align-items: center;
+    align-items: baseline;
     margin-bottom: 0.75rem;
   }
   
