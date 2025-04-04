@@ -26,7 +26,7 @@
   h1 {
     text-align: center;
     margin-bottom: 1.5rem;
-    color: #2E86AB;
+    color: #175e7d;
   }
   
   /* Labels and Inputs */
@@ -84,7 +84,7 @@
   input[type="checkbox"],
   input[type="radio"] {
     margin-right: 0.5rem;
-    accent-color: #2E86AB;
+    accent-color: #175e7d;
   }
 
 /* Star Ratings (Radio Buttons) */
@@ -100,7 +100,7 @@
   
   /* Submit Button */
   input[type="submit"] {
-    background-color: #2E86AB;
+    background-color: #175e7d;
     color: white;
     padding: 0.75rem 1.5rem;
     border: none;
@@ -119,14 +119,13 @@
     text-align: center;
     margin-top: 3rem;
     font-size: 0.9rem;
-    color: #666;
   }
   
   /* Review Counter on review.html */
   #review-counter {
     text-align: center;
     font-size: 1.1rem;
-    color: #2E86AB;
+    color: #175e7d;
     font-weight: 500;
     margin-top: 2rem;
   }
