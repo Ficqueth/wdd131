@@ -191,10 +191,10 @@ footer p {
     cursor: pointer;
     position: absolute;
     right: 20px; /* Position the hamburger menu to the right */
-    top: 20px;   /* Adjust the top distance as needed */
+    top: 20px;   
 }
 
-/* Quick Links Enhancement */
+/* Quick Links */
 .sidebar ul {
     padding: 0;
     list-style: none;
