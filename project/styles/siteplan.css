@@ -7,7 +7,7 @@ body {
 }
 
 header {
-    background-color: #2e8b57; /* Green theme */
+    background-color: #22623e; /* Green theme */
     color: white;
     padding: 20px 0;
     text-align: center;
@@ -46,11 +46,10 @@ nav ul li a.active {
 
 
 h1, h2, h3 {
-    color: #2e8b57; /* Main green color */
+    color: #22623e; /* Main green color */
     font-family: Georgia, serif;
 }
 p, li {
-    color: #555; /* Grey text for readability */
     font-family: Arial, sans-serif;
 }
 /* Styling for the Typography section */
@@ -64,7 +63,7 @@ p, li {
 }
 
 #color-schema li .green-color {
-    color: #2e8b57; /* Green color for "Green (#2e8b57)" text */
+    color: #22623e; /* Green color for "Green (#22623e)" text */
 }
 
 #color-schema li .tomato-red-color {
@@ -76,7 +75,9 @@ p, li {
     display: flex;
     flex-wrap: wrap; /* Ensures the content is responsive */
     margin: 20px;
+    gap: 2rem;  
 }
+
 
 /* Main content styles */
 .main-content {
@@ -86,6 +87,12 @@ p, li {
     margin-right: 20px; /* Space between main content and sidebar */
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.main-content img {
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 
 /* Sidebar styles */
@@ -121,7 +128,7 @@ p, li {
 .gallery-title {
     text-align: center;
     font-size: 2rem;
-    color: #2e8b57; /* Green color */
+    color: #22623e; /* Green color */
     margin-bottom: 20px; /* Adds space between the title and the gallery */
 }
   
@@ -151,16 +158,16 @@ p, li {
     padding: 1rem;
     border-radius: 10px;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    border-left: 5px solid #2e8b57;
+    border-left: 5px solid #22623e;
   }
   
   .season-card h3 {
     margin-top: 0;
-    color: #2e8b57;
+    color: #22623e;
   }
 
   footer {
-    background-color: #2e8b57;
+    background-color: #22623e;
     color: white;
     text-align: center;
     padding: 20px 10px;
@@ -211,7 +218,7 @@ footer p {
     display: flex;
     align-items: center;
     font-weight: 600;
-    color: #2e8b57;
+    color: #22623e;
     text-decoration: none;
 }
 
@@ -228,7 +235,7 @@ footer p {
 
 #connect form label {
     font-weight: bold;
-    color: #2e8b57;
+    color: #22623e;
 }
 
 #connect form input {
@@ -239,7 +246,7 @@ footer p {
 }
 
 #connect form button {
-    background-color: #2e8b57;
+    background-color: #22623e;
     color: white;
     padding: 10px;
     border: none;
@@ -298,6 +305,7 @@ footer p {
       .gallery {
         grid-template-columns: 1fr; /* 1 column for mobile screens */
     }
+
 }
 
 @media (min-width: 1200px) {
