@@ -67,7 +67,7 @@ p, li {
 }
 
 #color-schema li .tomato-red-color {
-    color: #ff6347; /* Tomato red color for "Tomato Red (#ff6347)" text */
+    color: #ac1f06; /* Tomato red color for "Tomato Red (#ac1f06)" text */
 }
 
 /* Layout for the homepage */
@@ -218,7 +218,7 @@ footer p {
     display: flex;
     align-items: center;
     font-weight: 600;
-    color: #22623e;
+    color: #ac1f06;
     text-decoration: none;
 }
 
@@ -246,7 +246,6 @@ footer p {
 }
 
 #connect form button {
-    background-color: #22623e;
     color: white;
     padding: 10px;
     border: none;
@@ -257,10 +256,23 @@ footer p {
 }
 
 #connect form button:hover {
-    background-color: #276749;
+    background-color: #e5533d;
 }
 
+.button-send-plant {
+    background-color: #ac1f06;  /* Tomato Red */
+    color: white;
+    padding: 12px 18px;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
 
+.button-send-plant:hover {
+    background-color: #e5533d;  /* Darker shade on hover */
+}
 
 
 @media (max-width: 1200px) {
