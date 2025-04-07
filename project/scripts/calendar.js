@@ -27,10 +27,37 @@ const events = {
     "2025-05-15": ["Mulch Beds to Retain Moisture"],
     "2025-05-25": ["Monitor for Pests & Diseases"],
 
-    // Bonus entries you already had
+    // June
     "2025-06-01": ["Plant Beans & Cucumbers"],
     "2025-06-21": ["First Day of Summer"],
-    "2025-09-22": ["Plant Garlic for Fall"],
+
+    // 🌻 July
+    "2025-07-01": ["Check Watering System"],
+    "2025-07-10": ["Start Harvesting Early Vegetables"],
+    "2025-07-20": ["Plant Fall Crops (Kale, Cabbage)"],
+
+     // 🍂 August
+     "2025-08-05": ["Start Planning Fall Garden"],
+     "2025-08-15": ["Harvest Summer Vegetables"],
+     "2025-08-25": ["Start Winter Squash Harvest"],
+
+     // September
+     "2025-09-22": ["Plant Garlic for Fall"],
+ 
+     // 🍁 October
+     "2025-10-01": ["Harvest Remaining Summer Crops"],
+     "2025-10-15": ["Plant Garlic & Shallots for Next Year"],
+     "2025-10-20": ["Prune Perennials"],
+ 
+     // 🍃 November
+     "2025-11-05": ["Prep Garden Beds for Winter"],
+     "2025-11-15": ["Start Mulching Beds for Winter Protection"],
+     "2025-11-25": ["Clean Garden Tools for Winter"],
+ 
+     // ❄️ December
+     "2025-12-01": ["Check Seed Inventory for Next Year"],
+     "2025-12-10": ["Plan Next Year's Garden Layout"],
+     "2025-12-20": ["Order Seeds for Spring Planting"],
 };
 
 let currentDate = new Date();
