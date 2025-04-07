@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
         localStorage.setItem("gardenerName", name);
         localStorage.setItem("favoritePlant", plant);
   
-        alert(`Thanks, ${name}! You love ${plant || "plants"}!`);
+        alert(`Thank you ${name} for submitting your favorite plant, - ${plant || "plants"} !`);
       });
     }
   

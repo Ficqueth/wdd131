@@ -1,8 +1,33 @@
 // calendar.js
 const events = {
+    // 🌱 January
+    "2025-01-10": ["Clean and Organize Garden Tools"],
+    "2025-01-15": ["Order Seed Catalogs"],
+    "2025-01-25": ["Start Onion Seeds Indoors"],
+
+    // 🌿 February
+    "2025-02-05": ["Start Broccoli & Cabbage Indoors"],
+    "2025-02-14": ["Check Soil Temp for Early Crops"],
+    "2025-02-28": ["Start Tomato Seeds Indoors"],
+
+    // 🌼 March
+    "2025-03-01": ["Direct Sow Peas & Spinach"],
+    "2025-03-10": ["Start Marigold & Zinnia Seeds"],
+    "2025-03-20": ["Prune Fruit Trees & Berry Bushes"],
+
+    // 🌷 April
+    "2025-04-05": ["Prep for Last Frost"],
     "2025-04-10": ["Plant Tomatoes Indoors"],
     "2025-04-15": ["Start Sunflower Seeds Inside"],
+    "2025-04-22": ["Direct Sow Squash, Beans, Sunflowers"],
     "2025-04-30": ["Last Frost Date"],
+
+    // 🌞 May
+    "2025-05-01": ["Plant Tomatoes, Peppers, Cucumbers Outdoors"],
+    "2025-05-15": ["Mulch Beds to Retain Moisture"],
+    "2025-05-25": ["Monitor for Pests & Diseases"],
+
+    // Bonus entries you already had
     "2025-06-01": ["Plant Beans & Cucumbers"],
     "2025-06-21": ["First Day of Summer"],
     "2025-09-22": ["Plant Garlic for Fall"],
@@ -38,7 +63,10 @@ const renderCalendar = (month, year) => {
         dayCell.classList.add("calendar-day");
         const dayStr = `${year}-${(month + 1).toString().padStart(2, '0')}-${day.toString().padStart(2, '0')}`;
 
-        if (dayStr === `${currentYear}-${(currentMonth + 1).toString().padStart(2, '0')}-${currentDate.getDate().toString().padStart(2, '0')}`) {
+        const today = new Date();
+        const todayStr = `${today.getFullYear()}-${(today.getMonth() + 1).toString().padStart(2, '0')}-${today.getDate().toString().padStart(2, '0')}`;
+
+        if (dayStr === todayStr) {
             dayCell.classList.add("today");
         }
 
@@ -49,6 +77,11 @@ const renderCalendar = (month, year) => {
             events[dayStr].forEach(event => {
                 const eventDiv = document.createElement("div");
                 eventDiv.classList.add("event");
+
+                if (event === "Last Frost Date") {
+                    eventDiv.classList.add("frost-event");
+                }
+
                 eventDiv.innerText = event;
                 dayCell.appendChild(eventDiv);
             });

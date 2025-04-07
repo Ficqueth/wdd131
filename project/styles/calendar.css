@@ -83,3 +83,10 @@ h1, h2 {
     margin-top: 5px;
     border-radius: 5px;
 }
+
+
+.frost-event {
+    background-color: #cce5ff; /* light blue */
+    color: #004085;
+}
+
