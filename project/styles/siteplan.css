@@ -2,12 +2,48 @@ body {
     background-color: #f7f7f7;
     font-family: Arial, sans-serif;
     color: #333;
+    margin: 0;
+    padding: 0;
 }
 
 header {
-    text-align: center; /* Centers the header text */
-    margin: 20px 0; /* Adds spacing above and below the header */
+    background-color: #2e8b57; /* Green theme */
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+    color: white;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 6px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    background-color: #276749; /* Darker green on hover or active */
+}
+
 
 h1, h2, h3 {
     color: #2e8b57; /* Main green color */
@@ -71,6 +107,100 @@ p, li {
     height: auto; /* Maintains the aspect ratio */
 }
 
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr; /* 1 column for mobile screens */
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .gallery-section {
+    padding: 20px; /* Optional padding for the section */
+}
+
+.gallery-title {
+    text-align: center;
+    font-size: 2rem;
+    color: #2e8b57; /* Green color */
+    margin-bottom: 20px; /* Adds space between the title and the gallery */
+}
+  
+  .plant-card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 1rem;
+    text-align: center;
+    background-color: #f8f8f8;
+  }
+  
+  .plant-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+
+  .calendar {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+  }
+  
+  .season-card {
+    background-color: #ffffff;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    border-left: 5px solid #2e8b57;
+  }
+  
+  .season-card h3 {
+    margin-top: 0;
+    color: #2e8b57;
+  }
+
+  footer {
+    background-color: #2e8b57;
+    color: white;
+    text-align: center;
+    padding: 20px 10px;
+    font-size: 0.9rem;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: 40px;
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    margin: 5px 0;
+}
+  
+#hamburger {
+    display: none;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    right: 20px; /* Position the hamburger menu to the right */
+    top: 20px;   /* Adjust the top distance as needed */
+}
+
+
+
+@media (max-width: 1200px) {
+    .gallery {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns for medium-sized screens */
+    }
+}
+
+@media (max-width: 900px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for smaller screens */
+    }
+}
+
 /* Responsiveness: Mobile View */
 @media (max-width: 768px) {
     .container {
@@ -79,4 +209,33 @@ p, li {
     .main-content {
         margin-right: 0;
     }
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #hamburger {
+        display: block;
+      }
+    
+      #main-nav {
+        display: none;
+        flex-direction: column;
+        gap: 1rem;
+      }
+    
+      #main-nav.active {
+        display: flex;
+      }
+
+      .gallery {
+        grid-template-columns: 1fr; /* 1 column for mobile screens */
+    }
 }
+
+@media (min-width: 1200px) {
+    .gallery {
+        grid-template-columns: repeat(4, 1fr); /* 2 columns for smaller screens */
+    }
+}
+

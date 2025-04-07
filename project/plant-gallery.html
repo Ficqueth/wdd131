@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="WDD 131 - Dynamic Web Fundamentals - Helaman Ficquet. Gardening Project - Plant Gallery">
+        <meta name="author" content="Helaman Ficquet">
+        <title>Plant Gallery | Gardening Journey</title>
+        <link rel="stylesheet" href="styles/siteplan.css">
+    </head>
+<body>
+    <header>
+        <h1>Plant Gallery</h1>
+        <nav>
+            <button id="hamburger" aria-label="Toggle Navigation">&#9776;</button>
+            <ul id="main-nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="plant-gallery.html" class="active">Plant Gallery</a></li>
+            <li><a href="calendar.html">Gardening Calendar</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <main class="container">
+        <section class="gallery-section">
+            <h2 class="gallery-title">Explore Beautiful Plants</h2>
+            <div class="gallery">
+          <div class="plant-card">
+            <img src="images/rose.webp" alt="Rose plant" loading="lazy">
+            <h3>Rose</h3>
+            <p><strong>Light:</strong> Full Sun</p>
+            <p><strong>Water:</strong> Regularly, but don’t overwater</p>
+            <p><strong>Care:</strong> Prune in spring for best blooms</p>
+          </div>
+    
+          <div class="plant-card">
+            <img src="images/succulent.pjpeg" alt="Succulent" loading="lazy">
+            <h3>Succulent</h3>
+            <p><strong>Light:</strong> Bright, indirect light</p>
+            <p><strong>Water:</strong> Every 2 weeks</p>
+            <p><strong>Care:</strong> Allow soil to dry between watering</p>
+          </div>
+    
+          <div class="plant-card">
+            <img src="images/snake-plant.jpg" alt="Snake Plant" loading="lazy">
+            <h3>Snake Plant</h3>
+            <p><strong>Light:</strong> Low to bright indirect light</p>
+            <p><strong>Water:</strong> Every 2-4 weeks</p>
+            <p><strong>Care:</strong> Great for beginners and air purification</p>
+          </div>
+
+          <div class="plant-card">
+            <img src="images/monstera.jpg" alt="Monstera" loading="lazy">
+            <h3>Monstera</h3>
+            <p><strong>Light:</strong> Filtered light</p>
+            <p><strong>Water:</strong> Once a week</p>
+            <p><strong>Care:</strong> Mist leaves regularly</p>
+          </div>
+
+          <div class="plant-card">
+            <img src="images/sunflower.jpg" alt="Sunflower" loading="lazy">
+            <h3>Sunflower</h3>
+            <p><strong>Light:</strong> Full sun</p>
+            <p><strong>Water:</strong> Water deeply once a week</p>
+            <p><strong>Care:</strong> Plant in well-drained soil with plenty of space</p>
+        </div>
+
+          <div class="plant-card">
+            <img src="images/fiddle-leaf-fig.png" alt="Fiddle Leaf Fig" loading="lazy">
+            <h3>Fiddle Leaf Fig</h3>
+            <p><strong>Light:</strong> Bright, indirect light</p>
+            <p><strong>Water:</strong> Weekly</p>
+            <p><strong>Care:</strong> Keep in a warm spot</p>
+          </div>
+
+          <div class="plant-card">
+            <img src="images/spider-plant.avif" alt="Spider Plant" loading="lazy">
+            <h3>Spider Plant</h3>
+            <p><strong>Light:</strong> Low to bright light</p>
+            <p><strong>Water:</strong> Once a week</p>
+            <p><strong>Care:</strong> Trim brown tips</p>
+          </div>
+
+          <div class="plant-card">
+            <img src="images/peace-lily.jpg" alt="Peace Lily" loading="lazy">
+            <h3>Peace Lily</h3>
+            <p><strong>Light:</strong> Low to moderate</p>
+            <p><strong>Water:</strong> When soil is dry</p>
+            <p><strong>Care:</strong> Wipe leaves monthly</p>
+          </div>
+
+
+          <div class="plant-card">
+            <img src="images/aloe-vera.avif" alt="Aloe Vera" loading="lazy">
+            <h3>Aloe Vera</h3>
+            <p><strong>Light:</strong> Direct sunlight</p>
+            <p><strong>Water:</strong> Every 3 weeks</p>
+            <p><strong>Care:</strong> Avoid overwatering</p>
+          </div>
+
+          <div class="plant-card">
+            <img src="images/teddybear.jpg" alt="teddybear" loading="lazy">
+            <h3>Teddybear ( Sunflower)</h3>
+            <p><strong>Light:</strong> Low to bright light</p>
+            <p><strong>Water:</strong>Water regularly, especially during dry spells</p>
+            <p><strong>Care:</strong> Deadhead spent flowers to encourage new blooms</p>
+          </div>
+
+          <div class="plant-card">
+            <img src="images/tulip.webp" alt="Tulip" loading="lazy">
+            <h3>Tulip</h3>
+            <p><strong>Light:</strong> Full sun</p>
+            <p><strong>Water:</strong> Weekly</p>
+            <p><strong>Care:</strong> Deadhead spent flowers to encourage new growth</p>
+        </div>
+
+        <div class="plant-card">
+            <img src="images/orchid.jpg" alt="Orchid" loading="lazy">
+            <h3>Orchid</h3>
+            <p><strong>Light:</strong> Bright, indirect light</p>
+            <p><strong>Water:</strong> Once a week</p>
+            <p><strong>Care:</strong> Let the soil dry out between waterings</p>
+        </div>
+
+        </div>
+        </section>
+      </main>
+    
+      <footer>
+        <p>&copy; <span id="currentyear"></span> Helaman Ficquet | USA</p>
+        <p id="lastModified"></p>
+      </footer>
+      <script src="scripts/script.js"></script>
+      <script src="scripts/getdates.js" defer></script>
+</body>
+</html>

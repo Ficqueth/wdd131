@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="WDD 131 - Dynamic Web Fundamentals - Helaman Ficquet. Gardening Project index page">
+    <meta name="author" content="Helaman Ficquet">
+    <title>Gardening Calendar | Gardening Journey</title>
+    <link rel="stylesheet" href="styles/siteplan.css">
+</head>
+<body>
+    <header>
+      <h1>Seasonal Gardening Calendar</h1>
+      <nav>
+        <button id="hamburger" aria-label="Toggle Navigation">&#9776;</button>
+        <ul id="main-nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="plant-gallery.html">Plant Gallery</a></li>
+          <li><a href="calendar.html" class="active">Gardening Calendar</a></li>
+        </ul>
+      </nav>
+    </header>
+  
+    <main class="container">
+      <section class="calendar">
+        <h2>What to Plant & Do Each Season</h2>
+  
+        <div class="season-card">
+          <h3>🌸 Spring</h3>
+          <ul>
+            <li>Start seeds indoors (tomatoes, peppers)</li>
+            <li>Plant leafy greens (lettuce, spinach)</li>
+            <li>Prune shrubs and trees</li>
+          </ul>
+        </div>
+  
+        <div class="season-card">
+          <h3>☀️ Summer</h3>
+          <ul>
+            <li>Water deeply and mulch</li>
+            <li>Harvest early crops</li>
+            <li>Plant beans, cucumbers, and squash</li>
+          </ul>
+        </div>
+  
+        <div class="season-card">
+          <h3>🍂 Fall</h3>
+          <ul>
+            <li>Plant garlic and onions</li>
+            <li>Collect leaves for composting</li>
+            <li>Clean up garden beds</li>
+          </ul>
+        </div>
+  
+        <div class="season-card">
+          <h3>❄️ Winter</h3>
+          <ul>
+            <li>Plan next year’s garden</li>
+            <li>Start an indoor herb garden</li>
+            <li>Clean and sharpen tools</li>
+          </ul>
+        </div>
+      </section>
+    </main>
+  
+    <footer>
+      <p>&copy; <span id="currentyear"></span> Helaman Ficquet | USA</p>
+      <p id="lastModified"></p>
+    </footer>
+    <script src="scripts/script.js"></script>
+    <script src="scripts/getdates.js" defer></script>
+  </body>
+</html>

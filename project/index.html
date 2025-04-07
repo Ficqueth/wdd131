@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="WDD 131 - Dynamic Web Fundamentals - Helaman Ficquet. Gardening Project index page">
+    <meta name="author" content="Helaman Ficquet">
+    <title>Site Plan for Gardening Tips & Plant Care</title>
+    <link rel="stylesheet" href="styles/siteplan.css">
+</head>
+<body>
+    <header>
+        <h1>Gardening Journey</h1>
+        <nav>
+            <button id="hamburger" aria-label="Toggle Navigation">&#9776;</button>
+            <ul id="main-nav">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="plant-gallery.html">Plant Gallery</a></li>
+            <li><a href="calendar.html">Gardening Calendar</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <main class="container">
+        <section class="main-content">
+          <h2>Welcome to My Gardening Journey</h2>
+          <p>I'm a beginner gardener who's just starting to explore planting trees and creating a greener space. This site is where I share helpful tips, a gallery of plants with care instructions, and a seasonal calendar to guide your gardening efforts throughout the year.</p>
+          
+          <section id="tips">
+            <h3>Beginner Gardening Tips</h3>
+            <ul>
+              <li>💧 Water deeply but less frequently to encourage deep roots.</li>
+              <li>🌿 Mulch to retain moisture and block weeds.</li>
+              <li>🌞 Know your plant's light and zone needs.</li>
+              <li>🌱 Don't be afraid to experiment and learn from mistakes.</li>
+            </ul>
+          </section>
+    
+          <section id="gallery-preview">
+            <h3>Featured Plant</h3>
+            <img src="images/blooming-rose.jpg" alt="Blooming rose bush" loading="lazy" />
+            <p><strong>Rose:</strong> Prefers full sun, needs regular watering, prune in early spring.</p>
+            <p><a href="plant-gallery.html">See More Plants →</a></p>
+          </section>
+    
+          <section id="connect">
+            <h3>Share Your Favorite Plant</h3>
+            <form id="contactForm">
+              <label for="name">Name:</label>
+              <input type="text" id="name" name="name" required />
+    
+              <label for="plant">Favorite Plant:</label>
+              <input type="text" id="plant" name="plant" />
+    
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" required />
+    
+              <button type="submit">Submit</button>
+            </form>
+          </section>
+        </section>
+    
+        <aside class="sidebar">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="calendar.html">🌼 Seasonal Calendar</a></li>
+            <li><a href="plant-gallery.html">🌿 Plant Gallery</a></li>
+            <li><a href="https://www.nal.usda.gov/plant-production-gardening/seeds-and-plants">National Agricultural Library</a></li>
+            <li><a href="https://grownative.org/">Grow Native</a></li>
+          </ul>
+        </aside>
+      </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> Helaman Ficquet | USA</p>
+        <p id="lastModified"></p>
+    </footer>
+    <script src="scripts/script.js"></script>
+    <script src="scripts/getdates.js" defer></script>
+</body>
+</html>
