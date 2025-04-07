@@ -16,9 +16,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   
     const savedName = localStorage.getItem("gardenerName");
-    if (savedName) {
-      const welcomeMsg = document.createElement("p");
-      welcomeMsg.textContent = `🌱 Welcome back, ${savedName}!`;
-      document.querySelector("main").prepend(welcomeMsg);
-    }
+if (savedName) {
+  const heading = document.querySelector("h2");
+  heading.textContent = `🌱 Welcome back to My Gardening Journey, ${savedName}!`;
+}
   });
