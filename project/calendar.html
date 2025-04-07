@@ -7,6 +7,7 @@
     <meta name="author" content="Helaman Ficquet">
     <title>Gardening Calendar | Gardening Journey</title>
     <link rel="stylesheet" href="styles/siteplan.css">
+    <link rel="stylesheet" href="styles/calendar.css">
 </head>
 <body>
     <header>
@@ -22,45 +23,15 @@
     </header>
   
     <main class="container">
-      <section class="calendar">
-        <h2>What to Plant & Do Each Season</h2>
-  
-        <div class="season-card">
-          <h3>🌸 Spring</h3>
-          <ul>
-            <li>Start seeds indoors (tomatoes, peppers)</li>
-            <li>Plant leafy greens (lettuce, spinach)</li>
-            <li>Prune shrubs and trees</li>
-          </ul>
-        </div>
-  
-        <div class="season-card">
-          <h3>☀️ Summer</h3>
-          <ul>
-            <li>Water deeply and mulch</li>
-            <li>Harvest early crops</li>
-            <li>Plant beans, cucumbers, and squash</li>
-          </ul>
-        </div>
-  
-        <div class="season-card">
-          <h3>🍂 Fall</h3>
-          <ul>
-            <li>Plant garlic and onions</li>
-            <li>Collect leaves for composting</li>
-            <li>Clean up garden beds</li>
-          </ul>
-        </div>
-  
-        <div class="season-card">
-          <h3>❄️ Winter</h3>
-          <ul>
-            <li>Plan next year’s garden</li>
-            <li>Start an indoor herb garden</li>
-            <li>Clean and sharpen tools</li>
-          </ul>
-        </div>
-      </section>
+        <section class="calendar">
+            <h2 id="current-month"></h2>
+            <div class="month-header">
+                <button id="prev-month">Prev</button>
+                <h2 id="month-name"></h2>
+                <button id="next-month">Next</button>
+            </div>
+            <div class="calendar-grid" id="calendar-grid"></div>
+        </section>
     </main>
   
     <footer>
@@ -69,5 +40,6 @@
     </footer>
     <script src="scripts/script.js"></script>
     <script src="scripts/getdates.js" defer></script>
+    <script src="scripts/calendar.js"></script>
   </body>
 </html>
